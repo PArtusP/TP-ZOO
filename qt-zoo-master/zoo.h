@@ -23,6 +23,9 @@ public:
     int getMoney();
     void testMe();
     void addmessage(ZooMessage *message);
+    ZooMessages *getMessage();
+    void setMessages(ZooMessages);
+    
 
 private:
     Zoo(const QString &name);
