@@ -28,6 +28,8 @@ bool ZooBudget::removeMoney(int amount)
     if(money < amount){
         ZooMessage* message = new ZooMessage(ZooErrorLevel::ERROR, "pas assez d'argent", this);
         zoo *p_zoo = Zoo::getInstance();
+        ZooMessages *p_messages = p_zoo -> getMessages();
+        p_messages -> addMessage(message);
         return false;
     }
     money -= amount;
