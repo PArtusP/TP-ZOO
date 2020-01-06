@@ -18,6 +18,7 @@ public:
     MessagesList getMessagesByErrorLevel(ZooErrorLevel lvl);
     MessagesList getMessagesByEmittor(ZooObject* emetteur);
     MessagesList getInstance();
+    QString getLastMessage();
 };
 
 #endif // ZOOMESSAGES_H
