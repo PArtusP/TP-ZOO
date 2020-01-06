@@ -1,6 +1,7 @@
 #include "zoobudget.h"
 #include <QDebug>
 #include "zoomessage.h"
+#include "zoo.h"
 
 ZooBudget *ZooBudget::m_budget = nullptr;
 
@@ -26,6 +27,7 @@ bool ZooBudget::removeMoney(int amount)
 {
     if(money < amount){
         ZooMessage* message = new ZooMessage(ZooErrorLevel::ERROR, "pas assez d'argent", this);
+        zoo *p_zoo = Zoo::getInstance();
         return false;
     }
     money -= amount;
