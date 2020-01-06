@@ -25,6 +25,7 @@ Zoo::~Zoo()
 {
     qDebug() << Q_FUNC_INFO;
     delete m_budget;
+    delete m_messages;
 
     Stocklist::iterator i;
     for(i = stockList.begin(); i != stockList.end(); ++i){
